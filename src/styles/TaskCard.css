@@ -169,6 +169,22 @@
         color: #fff;
         transition: all 0.3s linear;
     }
+
+    .TaskCardContainer:hover{
+        /* background: #303f9f; */
+        /* color: white; */
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        transform: scale(1.0);
+    }
+
+    .TaskCardTimerContainer button:hover{
+        transform: scale(1.0);
+    }
+
+    .TaskCardEditContainer button:hover{
+        transform: scale(1.0);
+    }
+    
 }
    
 @media screen and (min-width: 768px) and (max-width: 1439px) {

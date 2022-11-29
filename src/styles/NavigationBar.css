@@ -41,6 +41,10 @@
         transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.3s ease;
         cursor: pointer;
     }
+
+    .UserProfileContainer img:hover{
+        transform: scale(1.0);
+    }
 }
    
 @media screen and (min-width: 768px) and (max-width: 1439px) {
