@@ -1,0 +1,144 @@
+.TaskElementContainer{
+    display: grid;
+    height: auto;
+    min-height: 100%;
+    width: 100vw;
+    place-items: center;
+}
+
+.FormElementContainer{
+    background: #fff;
+    width: 30vw;
+    padding: 2vw 5vw;
+    border-radius: 1vw;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+}
+
+.TaskElementTitle{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.TaskElementIndividualContainer{
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.TaskElementIndividualContainer input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 2em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: 0.1vw solid transparent;
+    border-radius: 1vw;
+    padding: 1vw;
+    transition: border 0.25s ease;
+}
+
+.TaskElementIndividualContainer input:hover{
+    border: 0.1vw solid #a6abce;
+}
+
+.TaskElementIndividualContainer input:active{
+    border: 0.1vw solid #a6abce;
+}
+
+
+.TaskElementIndividualContainer button {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw;
+    font-size: 1.5em;
+    border-radius: 1vw;
+    margin-top: 2vh;
+    height: 8vh;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0.2vw solid #3f51b5;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.TaskElementIndividualContainer button:hover{
+    background: #3f51b5;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.TaskElementErrorHighlighterElement{
+    color: #FF5959;
+    margin-top: 12vw;
+    font-size: 1em;
+}
+
+.ClearButtonTaskElementContainer button{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5vh;
+    background: white;
+    font-size: 1.5em;
+    border-radius: 1vw;
+    border: 0.2vw solid #f33636;
+    height: 8vh;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ClearButtonTaskElementContainer button:hover{
+    background: #f33636;
+    color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .FormElementContainer{
+        width: 100vw;
+        padding: 1vw 2vw;
+        border-radius: 5vw;
+    }
+
+    .TaskElementTitle{
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .TaskElementIndividualContainer input{
+        font-size: 1.5em;
+    }
+
+    .ClearButtonTaskElementContainer button{
+        border-radius: 5vw;
+    }
+
+    .TaskElementIndividualContainer button {
+        border-radius: 5vw;
+    }
+}
+   
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .FormElementContainer{
+        width: 80vw;
+        padding: 2vw 5vw;
+        border-radius: 5vw;
+    }
+
+    .TaskElementTitle{
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .TaskElementIndividualContainer input{
+        font-size: 1.5em;
+    }
+
+    .ClearButtonTaskElementContainer button{
+        border-radius: 5vw;
+    }
+
+    .TaskElementIndividualContainer button {
+        border-radius: 5vw;
+    }
+}

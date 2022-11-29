@@ -1,0 +1,32 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+.tasksListContainer{
+    margin: 0;
+    padding: 0;
+}
+
+.modalAndTaskWrapperContainer{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'overlap';
+}
+
+.modalAndTaskWrapperItem{
+    grid-area: overlap;
+}
+
+.popup{
+    height: auto;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+}
+
+.modalElementsContainer{
+    margin: auto;
+}

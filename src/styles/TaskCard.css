@@ -1,0 +1,199 @@
+.TaskCardContainer{
+    background: #e8eaf6;
+    border-radius: 1vw;
+    padding: 2vw;
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.3s ease;
+}
+
+.TaskCardContainer:hover{
+    /* background: #303f9f; */
+    /* color: white; */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.TaskCardCategoryElement{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.TaskCardTitleElement{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.TaskCardKeywordsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5vw;
+}
+
+.TaskCardKeywordElement{
+    background: #3f51b5;
+    padding: 0.5vw;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    border-radius: 5vw;
+    margin-top: -0.2vw;
+}
+
+.TaskCardRevisionDateElement{
+    font-size: 1em;
+    margin-top: 2vw;
+}
+
+.TaskCardDateElementContainer input{
+    font-size: 1.5em;
+    border-style: none;
+    padding: 0.2vw;
+    font-weight: 600;
+    background: #e8eaf6;
+}
+
+.TaskCardTimerContainer{
+    margin-top: 5vh;
+    display: grid;
+    justify-items: end;
+}
+
+.TaskCardTimerContainer span{
+    margin-right: 0.6vw;
+}
+
+.TaskCardTimerContainer button{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border-style: none;
+    margin-top: 1vw;
+    cursor: pointer;
+    background: #3f51b5;
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.TaskCardTimerContainer button:hover{
+    transform: scale(1.1);
+}
+
+.TaskCardEditInput{
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    line-height: 1;
+    background: transparent;
+}
+
+.TaskCardTitleEditInputElement{
+    font-size: 1.5em;
+    margin-top: 1vw;
+}
+
+.TaskCardKeywordsEditInputElement{
+    font-size: 1em;
+    margin-top: 1vw;
+}
+
+.TaskCardEditSubmitButton{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    border-style: none;
+    margin-top: 1vw;
+    cursor: pointer;
+    background: #3f51b5;
+    color: #fff;
+}
+
+.TaskCardEditContainer{
+    display: grid;
+    justify-items: end;
+}
+
+.TaskCardEditContainer button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear,opacity 0.3s linear, transform 0.2s linear
+}
+
+.TaskCardContainer:hover .TaskCardEditContainer button{
+    visibility: visible;
+    opacity: 1;
+}
+
+.TaskCardEditContainer button:hover{
+    transform: scale(1.5);
+}
+
+.TaskCardClearContainer{
+    display: grid;
+    justify-items: end;
+}
+
+.TaskCardClearContainer button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .TaskCardContainer{
+        background: #e8eaf6;
+        border-radius: 10vw;
+        padding: 10vw;
+        cursor: pointer;
+        transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.3s ease;
+    }
+
+    .TaskCardRevisionDateElement{
+        font-size: 1em;
+        margin-top: 10vw;
+    }
+
+    .TaskCardTimerContainer button{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        border-style: none;
+        margin-top: 1vw;
+        cursor: pointer;
+        background: #3f51b5;
+        color: #fff;
+        transition: all 0.3s linear;
+    }
+}
+   
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .TaskCardContainer{
+        background: #e8eaf6;
+        border-radius: 5vw;
+        padding: 5vw;
+        cursor: pointer;
+        transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.3s ease;
+    }
+
+    .TaskCardRevisionDateElement{
+        font-size: 1em;
+        margin-top: 5vw;
+    }
+
+    .TaskCardTimerContainer button{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 50%;
+        border-style: none;
+        margin-top: 1vw;
+        cursor: pointer;
+        background: #3f51b5;
+        color: #fff;
+        transition: all 0.3s linear;
+    }
+}

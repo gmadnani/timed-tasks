@@ -1,0 +1,132 @@
+.TaskAnalyticsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    grid-auto-rows: 1fr;
+    gap: 2vw;
+    place-items: center;
+    margin-bottom: 5vw;
+}
+
+.TaskAnalyticsTaskDetailsContainer{
+    background: #e8eaf6;
+    padding: 2vw;
+    border-radius: 2vw;
+    transition: transform 0.3s ease;
+}
+
+.TaskAnalyticsTaskDetailsContainer:hover{
+    transform: scale(1.1);
+}
+
+.BarGraphContainer{
+    transition: transform 0.3s ease;
+    background: #e8eaf6;
+    border-radius: 2vw;
+    padding: 2vw;
+}
+
+.BarGraphContainer:hover{
+    transform: scale(1.1);
+}
+
+.TaskLogsContainer{
+    grid-row: span 4;
+    width: 100%;
+    height: 100%;
+    background: #e8eaf6;
+    border-radius: 2vw;
+    transition: transform 0.3s ease;
+}
+
+.TaskLogsContainer:hover{
+    transform: scale(1.05);
+}
+
+.TaskLogsContainerHeading{
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+.TaskLogsContainerContent:first-child{
+    margin-top: 1vw;
+    margin-left: 2vw;
+}
+
+.TaskLogsContainerContent{
+    margin-top: 0.5vw;
+    margin-left: 2vw;
+}
+
+.TaskLogsContainer p{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.TaskLogsDateHeading{
+    font-size: 1em;
+    color: grey;
+    font-weight: 600;
+}
+
+.TaskLogsDateValue{
+    font-size: 1em;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .TaskAnalyticsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vw;
+        grid-auto-rows: 1fr;
+        gap: 2vw;
+        place-items: center;
+        margin-bottom: 5vw;
+    }
+
+    .TaskAnalyticsTaskDetailsContainer{
+        background: #e8eaf6;
+        padding: 2vw 8vw;
+        border-radius: 2vw;
+        transition: transform 0.3s ease;
+    }
+
+    .TaskCardKeywordsContainer p{
+        margin: 1vw;
+        padding: 2vw;
+    }
+
+}
+   
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .TaskAnalyticsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vw;
+        grid-auto-rows: 1fr;
+        gap: 2vw;
+        place-items: center;
+        margin-bottom: 5vw;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    .TaskAnalyticsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vw;
+        grid-auto-rows: 1fr;
+        gap: 2vw;
+        place-items: center;
+        margin-bottom: 5vw;
+    }
+}
