@@ -18,7 +18,7 @@ function NavigationBar({user, modalType, modalStatus}) {
             </div>
             <div className='UserProfileContainer'>
                 <img 
-                    referrerPolicy='no-referrer' src='https://lh3.googleusercontent.com/a/ALm5wu0mU0fRG0wyqay-BZ5nj5ERuCykmLHspERDNIAxog=s96-c' onClick={handleProfileClick}></img>
+                   alt='User Profile' referrerPolicy='no-referrer' src={imageUrl} onClick={handleProfileClick}></img>
             </div>
         </div>
     )

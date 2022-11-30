@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import TaskElement from './TaskElement';
+import React from 'react'
 import '../styles/AddTask.css'
 
 function AddTask({token, user, setIsModalOpen, modalType}) {

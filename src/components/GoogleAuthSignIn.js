@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import {ReactComponent as GoogleLogo} from '../assets/googlelogo.svg'
 
 
 export default function GoogleAuthSignIn(props) {

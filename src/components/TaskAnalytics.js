@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import { getAuth } from "firebase/auth";
@@ -6,7 +6,6 @@ import '../styles/TaskAnalytics.css'
 import ChartsDaily from './ChartsDaily';
 import ChartsMonthly from './ChartsMonthly';
 import ChartsYearly from './ChartsYearly';
-import TaskLogs from './TaskLogs';
 
 function TaskAnalytics() {
     
@@ -49,6 +48,7 @@ function TaskAnalytics() {
                                 if(keyword){
                                     return <p key={keyword} className='TaskCardKeywordElement'>{keyword}</p>
                                 }
+                                return null
                             })}
                         </div>
                     </div>

@@ -73,6 +73,7 @@ function TaskCard({task, user, fetchTasks, dateToFetch}) {
               if(keyword){
                 return <p key={keyword} className='TaskCardKeywordElement'>{keyword}</p>
               }
+              return null
             })}
           </div>
           <p className='TaskCardRevisionDateElement'>Next Revision Date</p>
