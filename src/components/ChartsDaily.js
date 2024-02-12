@@ -13,7 +13,7 @@ function ChartsDaily({user, task}) {
 
     const fetchDailyLogs = async () =>{
         setInitialFetch(true)
-        const res = await axios.get('https://timedtask-server.up.railway.app/api/getDailyLogs', {
+        const res = await axios.get('http://localhost:4000/api/getDailyLogs', {
             params: { userId: user.uid, taskId: task.taskId },
             headers: {
                 Authorization: `Bearer ${user.accessToken}`,

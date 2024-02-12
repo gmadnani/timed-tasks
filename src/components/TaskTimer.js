@@ -42,12 +42,12 @@ function TaskTimer({task, user, revisionDate}) {
         taskElement.taskRevisionDate = revisionDate
         const headers = {Authorization: `Bearer ${user.accessToken}`}
         axios
-            .post('https://timedtask-server.up.railway.app/api/updateTask', taskElement, {headers: headers})
+            .post('http://localhost:4000/api/updateTask', taskElement, {headers: headers})
             .then(() => console.log("Updated Task"))
             .catch((e) => console.log(e.message))
         
         axios
-            .post('https://timedtask-server.up.railway.app/api/logTimeForTask', {task: taskElement, timeLogger: timeInMilliSeconds}, {headers: headers})
+            .post('http://localhost:4000/api/logTimeForTask', {task: taskElement, timeLogger: timeInMilliSeconds}, {headers: headers})
             .then(() => console.log("Updated Task"))
             .catch((e) => console.log(e.message))
     }

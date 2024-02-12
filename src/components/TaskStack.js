@@ -9,7 +9,7 @@ function TaskStack({token, user, modalStatus}) {
 
     const handleSpecificDateChange = async (e) =>{
         if(token){
-            const res = await axios.get('https://timedtask-server.up.railway.app/api/gettasklistfordate', {
+            const res = await axios.get('http://localhost:4000/api/gettasklistfordate', {
                     params: { userId: user.uid, dateForFetch: e.target.value},
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -45,7 +45,7 @@ function TaskStack({token, user, modalStatus}) {
     const fetchTasks = async (dateToFetch) =>{
         if(token){
             if(dateToFetch === 'All'){
-                const res = await axios.get('https://timedtask-server.up.railway.app/api/gettasklist', {
+                const res = await axios.get('http://localhost:4000/api/gettasklist', {
                     params: { userId: user.uid },
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ function TaskStack({token, user, modalStatus}) {
                 const formatDate = todayDate.getDate() < 10 ? `0${todayDate.getDate()}`:todayDate.getDate();
                 const formatMonth = todayDate.getMonth() + 1 < 10 ? `0${todayDate.getMonth() + 1}`: todayDate.getMonth() + 1;
                 const formattedDate = [todayDate.getFullYear(), formatMonth, formatDate].join('-');
-                const res = await axios.get('https://timedtask-server.up.railway.app/api/gettasklistfordate', {
+                const res = await axios.get('http://localhost:4000/api/gettasklistfordate', {
                     params: { userId: user.uid, dateForFetch: formattedDate},
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ function TaskStack({token, user, modalStatus}) {
                 const formatDate = todayDate.getDate() - 1 < 10 ? `0${todayDate.getDate()}`:todayDate.getDate() - 1;
                 const formatMonth = todayDate.getMonth() + 1 < 10 ? `0${todayDate.getMonth() + 1}`: todayDate.getMonth() + 1;
                 const formattedDate = [todayDate.getFullYear(), formatMonth, formatDate].join('-');
-                const res = await axios.get('https://timedtask-server.up.railway.app/api/gettasklistfordate', {
+                const res = await axios.get('http://localhost:4000/api/gettasklistfordate', {
                     params: { userId: user.uid, dateForFetch: formattedDate},
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -102,7 +102,7 @@ function TaskStack({token, user, modalStatus}) {
                 const formatDate = todayDate.getDate() + 1 < 10 ? `0${todayDate.getDate()}`:todayDate.getDate() + 1;
                 const formatMonth = todayDate.getMonth() + 1 < 10 ? `0${todayDate.getMonth() + 1}`: todayDate.getMonth() + 1;
                 const formattedDate = [todayDate.getFullYear(), formatMonth, formatDate].join('-');
-                const res = await axios.get('https://timedtask-server.up.railway.app/api/gettasklistfordate', {
+                const res = await axios.get('http://localhost:4000/api/gettasklistfordate', {
                     params: { userId: user.uid, dateForFetch: formattedDate},
                     headers: {
                         Authorization: `Bearer ${token}`,

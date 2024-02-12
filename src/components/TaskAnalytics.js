@@ -18,7 +18,7 @@ function TaskAnalytics() {
 
     const user = getAuth().currentUser
     const fetchTask = async () =>{
-        const res = await axios.get('https://timedtask-server.up.railway.app/api/getTask', {
+        const res = await axios.get('http://localhost:4000/api/getTask', {
                     params: { userId: user.uid, taskId: taskId },
                     headers: {
                         Authorization: `Bearer ${user.accessToken}`,
@@ -37,7 +37,7 @@ function TaskAnalytics() {
     })
 
     const shouldDisplayData = () =>{
-        if(taskElement !== {} && taskElement.taskTitle !== undefined){
+        if( taskElement.taskTitle !== undefined){
             return (
                 <div className='TaskAnalyticsContainer'>
                     <div className='TaskAnalyticsTaskDetailsContainer'>

@@ -21,7 +21,7 @@ function TaskCard({task, user, fetchTasks, dateToFetch}) {
     setTaskElement(task)
     const headers = {Authorization: `Bearer ${user.accessToken}`}
     axios
-      .post('https://timedtask-server.up.railway.app/api/updateTask', task, {headers: headers})
+      .post('http://localhost:4000/api/updateTask', task, {headers: headers})
       .catch((e) => console.log(e.message))
     fetchTasks(dateToFetch)
   }
@@ -37,7 +37,7 @@ function TaskCard({task, user, fetchTasks, dateToFetch}) {
   const handleTaskUpdate = (e) => {
     const headers = {Authorization: `Bearer ${user.accessToken}`}
     axios
-      .post('https://timedtask-server.up.railway.app/api/updateTask', taskElement, {headers: headers})
+      .post('http://localhost:4000/api/updateTask', taskElement, {headers: headers})
       .catch((e) => console.log(e.message))
     setIsBeingEdited(false)
     fetchTasks(dateToFetch)
@@ -46,7 +46,7 @@ function TaskCard({task, user, fetchTasks, dateToFetch}) {
   const handleDeleteClick = (e) => {
     const headers = {Authorization: `Bearer ${user.accessToken}`}
     axios
-      .post('https://timedtask-server.up.railway.app/api/deleteTask', taskElement, {headers: headers})
+      .post('http://localhost:4000/api/deleteTask', taskElement, {headers: headers})
       .catch((e) => console.log(e.message))
     fetchTasks(dateToFetch)
   }

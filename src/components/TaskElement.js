@@ -42,8 +42,8 @@ export default function TaskElement({bToken, user, setIsModalOpen}) {
     const handleTaskCreation = async (e) => {
         const headers = {Authorization: `Bearer ${token}`}
         
-        //const count = await axios.get('https://timedtask-server.up.railway.app/api/gettaskscount',{ params: { userId: user.userId } }, {headers: headers})
-        const countData = await axios.get('https://timedtask-server.up.railway.app/api/gettaskscount', {
+        //const count = await axios.get('http://localhost:4000/api/gettaskscount',{ params: { userId: user.userId } }, {headers: headers})
+        const countData = await axios.get('http://localhost:4000/api/gettaskscount', {
             params: { userId: user.uid },
             headers: {
               Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ export default function TaskElement({bToken, user, setIsModalOpen}) {
         const count = countData.data.count
         const taskData = {userId: user.uid, taskId: `task${count + 1}`, ...task}
         axios
-            .post('https://timedtask-server.up.railway.app/api/createtasks', taskData, {headers: headers})
+            .post('http://localhost:4000/api/createtasks', taskData, {headers: headers})
             .then(() => setIsModalOpen(false))
             .catch((e) => console.log(e.message))
     
